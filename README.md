@@ -1,0 +1,2 @@
+# AspnetCore_BackgroundTask
+用于AspnetCore的基于IHostedService的后台任务工具
