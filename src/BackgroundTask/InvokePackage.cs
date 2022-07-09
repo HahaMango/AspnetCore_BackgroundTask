@@ -39,6 +39,7 @@ namespace TM.Core.TaskQueue
         {
             Request = request;
             HandlerType = handlerType;
+            CancelToken = cancelToken;
         }
 
         public InvokePackage(IBackgroundTaskRequest request, Type handlerType, CancellationToken cancelToken, bool enableRetry) : this(request, handlerType, cancelToken)
@@ -46,15 +47,15 @@ namespace TM.Core.TaskQueue
             EnableFalidRetry = enableRetry;
         }
 
-        public Type HandlerType { get; set; }
+        public Type HandlerType { get; }
 
-        public IBackgroundTaskRequest Request { get; set; }
+        public IBackgroundTaskRequest Request { get; }
 
         /// <summary>
         /// 失败重试
         /// </summary>
         public bool EnableFalidRetry { get; set; } = false;
 
-        public CancellationToken cancelToken { get; set; }
+        public CancellationToken CancelToken { get; }
     }
 }

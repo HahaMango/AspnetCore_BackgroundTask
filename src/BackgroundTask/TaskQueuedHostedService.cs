@@ -92,7 +92,7 @@ namespace TM.Core.TaskQueue
                         {
                             var handler = scope.ServiceProvider.GetRequiredService(ip.HandlerType);
                             var method = handler.GetType().GetMethod("Handler", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public);
-                            await (Task)method.Invoke(handler, new object[] { ip.Request, ip.cancelToken });
+                            await (Task)method.Invoke(handler, new object[] { ip.Request, ip.CancelToken });
                             //await handler.Handler(ip.Request, ip.cancelToken);
                         }
                         catch(Exception ex)
