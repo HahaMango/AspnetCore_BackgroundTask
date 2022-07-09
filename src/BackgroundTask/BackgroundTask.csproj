@@ -7,7 +7,10 @@
     <Authors>Chen Chiva</Authors>
     <Company>Chen Chiva</Company>
     <Product>Chen Chiva</Product>
-    <Description />
+	<VersionPrefix>1.0.1</VersionPrefix>
+    <Description>用于AspnetCore的基于IHostedService的后台任务库，该包主要解决了在HTTP请求执行比较长时间的任务时在后台新建线程执行而HTTP马上返回时依赖注入的服务被销毁的问题。</Description>
+    <PackageProjectUrl>https://github.com/HahaMango/AspnetCore_BackgroundTask</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/HahaMango/AspnetCore_BackgroundTask</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CodeTest|AnyCPU'">
